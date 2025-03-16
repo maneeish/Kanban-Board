@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container" id="kanban-board">
+      <!-- Todo Board -->
+      <div id="todo-board" class="board">
+        <h3>Todo (<span id="todo-count">0</span>)</h3>
+        <div class="search-container">
+          <input type="text" placeholder="Write Here" id="todo-input" />
+          <button id="add-todo-button">Add Task</button>
+        </div>
+        <div class="task-list" id="todo-task-list"></div>
+      </div>
+
+      <!-- In Progress Board -->
+      <div id="progress-board" class="board">
+        <h3>In Progress (<span id="progress-count">0</span>)</h3>
+        <div class="search-container">
+          <input type="text" placeholder="Write Here" id="progress-input" />
+          <button id="add-progress-button">Add Task</button>
+        </div>
+        <div class="task-list" id="progress-task-list"></div>
+      </div>
+
+      <!-- Done Board -->
+      <div id="done-board" class="board">
+        <h3>Done (<span id="done-count">0</span>)</h3>
+        <div class="search-container">
+          <input type="text" placeholder="Write Here" id="done-input" />
+          <button id="add-done-button">Add Task</button>
+        </div>
+        <div class="task-list" id="done-task-list"></div>
+      </div>
+    </div>
+    <button id="add-new-board-button">Add New Board</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
