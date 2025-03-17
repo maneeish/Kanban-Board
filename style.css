@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 20px; /* Space between boards */
+    padding: 20px;
+    flex-wrap: wrap; /* Wrap boards on smaller screens */
+}
+
+.board {
+    border: 1px solid #e4e4e4;
+    min-height: 80vh; /* Minimum height for boards */
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    overflow-y: auto; /* Add scroll when tasks overflow */
+}
+
+.task-list {
+    margin-top: 10px;
+    flex-grow: 1; /* Expand to fit tasks */
+    border: 2px dashed #ccc; /* Visual cue for drop zones */
+    min-height: 100px; /* Ensure drop areas are visible */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.task-list.dragover {
+    background-color: #f0f8ff; /* Highlight while dragging over */
+    border-color: #3498db; /* Dynamic border color during drag */
+}
+
+.task {
+    display: flex;
+    justify-content: space-between; /* Align task content and buttons */
+    align-items: center; 
+    border: 1px solid #ccc;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: rgb(126, 239, 126); /* Task background color */
+    cursor: grab;
+    transition: 0.3s ease;
+}
+
+.task:hover {
+    background-color: rgb(100, 210, 100); /* Adjusted hover color */
+    color: black;
+}
+
+.task:active {
+    cursor: grabbing;
+}
+
+.task-content {
+    flex: 1; /* Take up available space */
+    word-break: break-word; /* Prevent content overflow */
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.edit-task {
+    background-color: #3498db;
+    color: white;
+    transition: 0.3s;
+}
+
+.edit-task:hover {
+    background-color: #2980b9;
+}
+
+.delete-task {
+    background-color: #e74c3c;
+    color: white;
+    transition: 0.3s;
+}
+
+.delete-task:hover {
+    background-color: #c0392b;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    height: 40px;
+    padding: 8px;
+}
+
+#add-new-board-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-left: 30px;
+}
+
+#add-new-board-button:hover {
+    background-color: #45a049;
+}
